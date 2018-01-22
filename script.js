@@ -1,14 +1,16 @@
 $( document ).ready( function() {
 
-  var pages = ["home", "mount-fuji", "tokyo", "osaka", "fukuoka", "kyoto"];
+    // Load page - for loop.
+    var pages = ["home", "mount-fuji", "tokyo", "osaka", "fukuoka", "kyoto"];
 
   for (i = 0; i < pages.length; i++) {
     $( '#' + pages[i] + '' ).click( function() {
+
       // Get content and display it
       var data = getContent($( this ).attr('id'))
       $( '.title' ).text(data.title);
       $( '.content' ).text(data.content);
-     // $( '.banner' ).attr("src", data.banner);
+      //$( '.banner' ).attr("src", data.banner);
 
       // Set current navbar button to active
       $( ".active ").removeClass("active");
@@ -31,7 +33,7 @@ function getContent(page) {
     case "mount-fuji":
       title = "Mount Fuji"
       content = `Mount Fuji (富士山 Fujisan, located on Honshu Island, is the highest mountain in Japan at 3,776.24 m (12,389 ft). It is an active stratovolcano that last erupted in 1707–1708. Mount Fuji lies about 100 kilometres (60 mi) south-west of Tokyo, and can be seen from there on a clear day. Mount Fuji's exceptionally symmetrical cone, which is snow-capped for about 5 months a year, is a well-known symbol of Japan and it is frequently depicted in art and photographs, as well as visited by sightseers and climbers. Mount Fuji is one of Japan's "Three Holy Mountains" (三霊山 Sanreizan) along with Mount Tate and Mount Haku. It is also a Special Place of Scenic Beauty and one of Japan's Historic Sites. It was added to the World Heritage List as a Cultural Site on June 22, 2013. According to UNESCO, Mount Fuji has "inspired artists and poets and been the object of pilgrimage for centuries". UNESCO recognizes 25 sites of cultural interest within the Mt. Fuji locality. These 25 locations include the mountain and the shrine, Fujisan Hongū Sengen Taisha, as well as the Taisekiji Head Temple founded in 1290, later immortalized by Japanese Ukiyoe artist Hokusai in his final works.`
-       // banner = "url(img/fuji06.jpg)",
+        banner = "url = img/fuji06.jpg"
       break;
 
       case "tokyo":
